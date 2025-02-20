@@ -70,8 +70,7 @@ body {
 
 .categories {
     display: flex;
-    padding-bottom: 10px;
-    margin: 10px;
+    padding: 10px;
     border-bottom: solid black 1px;
     justify-content: space-around;
 
@@ -82,6 +81,12 @@ body {
     padding: 10px;
     color: white;
     border-radius: 30px;
+}
+.categories p:hover{
+    transition: 1s;
+    background-color: transparent;
+    color: black;
+    border: #9931DA solid 1px;
 }
 .sale-image{
     position: relative;
@@ -97,7 +102,23 @@ body {
     border-radius: 30px; 
     padding: 20px;
     gap: 5px;
+    animation-name: scale;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+@keyframes scale{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+         opacity: 1;
+         transform: scale(1);
+    }
+}
+
 .sale-image_off button{
     background-color: #9931DA;
     border-bottom: none;
